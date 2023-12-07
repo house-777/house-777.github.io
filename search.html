@@ -46,15 +46,10 @@
 
     <script>
         function performSearch() {
-            // Get the search input value
             var searchQuery = document.getElementById('search').value.toLowerCase();
-
-            // Simulate fetching file names and associated links from the server
             var fileLinks = getServerFileLinks();
-
-            // Filter and display file names and links based on the search query
             var searchResultsDiv = document.getElementById('searchResults');
-            searchResultsDiv.innerHTML = ""; // Clear previous results
+            searchResultsDiv.innerHTML = ""; 
 
             for (var i = 0; i < fileLinks.length; i++) {
                 var fileName = fileLinks[i].name.toLowerCase();
@@ -68,9 +63,7 @@
             }
         }
 
-        // Simulated function to get file names and links from the server
         function getServerFileLinks() {
-            // This is just an example. You would replace this with a server request.
             return [
               { name: '10-minutes-till-dawn', link: '/0 - 100/10-minutes-till-dawn_new.html' },
               { name: '11-11', link: '/0 - 100/11-11_new.html' },
