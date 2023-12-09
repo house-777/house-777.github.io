@@ -9,12 +9,34 @@
   <title>House</title>
   <link rel="icon" type="image/x-icon" href="/imges/House-symbol-may-be-unfamiliar-to-users-with-low-computer-literacy.ico">
 </head>
-
   <br>
   <button onclick='window.location.href = "games.html";'>Home</button>
-  <button onclick='window.location.href = ".html";'>Home</button>
+  <button onclick='window.location.href = "search.html";'>Search</button>
+  <button onclick='window.location.href = "tc.html";'>Terms & Conditions</button>
+  <button onclick='window.location.href = "report.html";'>New game / Report something</button>
   <button style="float: right;" onclick='window.location.href = "logout.html";'>Logout</button>
   <br>
   <hr>
   <br>
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeXjyvQTR9I5UzcXOZjlynhf8rijZphFiUfoejBzv9XxA2LKg/viewform?embedded=true" width="640" height="497" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScct8EgRm2uWYUuIHiOk85MCkSD96AU--vymFK4N4E-WScgBg/viewform?embedded=true" width="640" height="497" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  <div id = "Frace"></div>
+  <script>
+    const corectcom = ['0','p','l','m']
+    let userin = [];
+    document.addEventListener("keydown", function(event) {
+      const keyp = event.key;
+      if(keyp === "ArrowRight" || /^[a-zA-Z0-9]$/.test(keyp)){
+        userin.push(keyp)
+      }
+      if(JSON.stringify(userin) === JSON.stringify(corectcom)){
+        userin = [];
+        document.getElementById('Frace').innerText =  'Welocom admin!';
+        window.sessionStorage.admin = "yes";
+        window.location.href = "ansers.html";
+      }
+    if(window.sessionStorage.admin == "yes"){
+      document.getElementById('Frace').innerText =  'Welocom admin!';
+      window.location.href = "ansers.html";
+    };
+    });
+  </script>
+  <iframe  src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__kJlkgVUNk9JS0pZRU5TTVVDQ1gyUk5VSkQyWE5ESy4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; width:100%; height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
