@@ -38,31 +38,39 @@
     <br>
     <br>
     <br>
-    <h1>Most popular games</h1>
+    <h1>Next holiday</h1>
     <hr>
-    <body>
-      <div class = "alert warinht this_border">
-        <div class = "icon">
-          <span class = "material-symbols-outlined">
-            info
-          </span>
-        </div>
-        <div class = "alert alertText">
-          <p><b>Complete the form,</b> to get your favourite games on to popular games <a href = "Most_pop_g.html">Click here</a></p> 
-        </div>
-        <button class = "close" onclick="dothings()"><span class="material-symbols-outlined">
-        close
-        </span></button>
-      </div>
-
+    <div id="chrismas_c"></div>
       <script>
-        const alert = document.querySelector(".alert");
-        setTimeout(() => dothings(), 10000);
-        function dothings(){
-          alert.remove();
-        }
+        var chrismas_c = new Date("February 12, 2024 14:50:00").getTime();
 
+
+        var countdownInterval = setInterval(updateCountdown, 1000);
+
+        function updateCountdown() {
+            var currentDate = new Date().getTime();
+            var timeDifference = chrismas_c - currentDate;
+
+            if (timeDifference <= 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("chrismas_c").innerHTML = "Countdown expired!";
+            } else {
+                var days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+                document.getElementById("chrismas_c").innerHTML = `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+            }
+        }
       </script>
+    <style>
+      #countdown {
+          font-size: 50px;
+          font-weight: bold;
+          color: #ffffff;
+      }
+    </style>
     <br>
     <br>
     <h1>Random game</h1>
