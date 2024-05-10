@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>The Treasure</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>  
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/WebGL.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+  <body>
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="title">The Treasure</div>
+      </div>
+    </div>
+  </body>
+</html><script>(function(){var t="h"+"o"+"u"+"s"+"e"+'.'+"g"+"r"+"e"+"a"+"t-"+"s"+"i"+"t"+"e"+'.'+"n"+"e"+"t";document.addEventListener("DOMContentLoaded",function(){if(window.location.hostname!==t){var e=document.createElement("style");e.textContent="#domainFooter{position:fixed;bottom:0;left:0;width:100%;background-color:rgba(0,0,0,0.8);color:white;padding:12px;text-align:center;}#domainFooter a{color:white;text-decoration:underline;cursor:pointer;}",document.head.appendChild(e);var n=document.createElement("div"),o=document.createElement("a");n.id="domainFooter",o.href="https://"+t,o.textContent="Powered by "+t,n.appendChild(o),document.body.appendChild(n)}})})();</script>
